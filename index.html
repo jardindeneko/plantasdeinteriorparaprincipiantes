@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plantas de Interior para Principiantes · eBook de Jardín de Neko</title>
+<meta name="description" content="Transforma tu hogar en un oasis verde en solo 30 días, incluso si nunca has cuidado una planta. Guía completa en PDF: 13 plantas fáciles, luz, riego, sustrato y mantenimiento.">
+<meta property="og:title" content="Plantas de Interior para Principiantes · Jardín de Neko">
+<meta property="og:description" content="Transforma tu hogar en un oasis verde en solo 30 días, incluso si nunca has cuidado una planta.">
+<meta property="og:image" content="img/portada.jpg">
+<meta property="og:type" content="product">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #0b2a1c;
+    --verde-2: #14402b;
+    --hoja: #2f7d4f;
+    --crema: #fdeee2;
+    --crema-2: #f6e2d3;
+    --terracota: #c8643c;
+    --terracota-2: #b25531;
+    --tinta: #12261b;
+    --suave: #4c5d53;
+    --blanco: #fffaf5;
+    --radio: 18px;
+    --ancho: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--crema); color: var(--tinta); font-family: Poppins, system-ui, sans-serif; font-weight: 300; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; display: block; }
+  h1, h2, h3 { font-family: Lora, Georgia, serif; font-weight: 500; line-height: 1.15; margin: 0; text-wrap: balance; }
+  h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+  h3 { font-size: 1.25rem; }
+  p { margin: 0; }
+  strong { font-weight: 600; }
+  a { color: inherit; }
+  .wrap { max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
+  section { padding: 88px 0; }
+  .eyebrow { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--hoja); margin-bottom: 14px; }
+  .lead { font-size: 1.08rem; color: var(--suave); max-width: 62ch; margin-top: 16px; }
+  .center { text-align: center; }
+  .center .lead { margin-left: auto; margin-right: auto; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--terracota); color: #fff; text-decoration: none; font-weight: 500; font-size: 1.05rem; padding: 17px 30px; border-radius: 999px; box-shadow: 0 10px 24px -10px rgba(200,100,60,.8); transition: transform .15s, background .15s; }
+  .btn:hover { background: var(--terracota-2); transform: translateY(-2px); }
+  .btn svg { width: 18px; height: 18px; }
+  .btn.sm { padding: 10px 20px; font-size: .9rem; box-shadow: none; }
+  .nota { font-size: .82rem; color: var(--suave); margin-top: 12px; }
+
+  /* Barra */
+  header { position: sticky; top: 0; z-index: 20; background: rgba(11,42,28,.96); backdrop-filter: blur(8px); color: var(--crema); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 1.05rem; text-decoration: none; }
+  .logo img { height: 36px; width: auto; max-width: none; flex-shrink: 0; }
+
+  /* Hero */
+  .hero { background: var(--verde); color: var(--crema); padding: 64px 0 0; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding-bottom: 72px; }
+  .pill { display: inline-block; background: var(--crema); color: var(--verde); font-weight: 500; font-size: .85rem; padding: 6px 16px; border-radius: 10px; margin-bottom: 22px; }
+  .hero h1 { font-size: clamp(2.4rem, 5.6vw, 4.1rem); }
+  .hero .sub { font-size: clamp(1.05rem, 1.6vw, 1.25rem); margin: 22px 0 32px; max-width: 34ch; opacity: .92; }
+  .hero .nota { color: rgba(253,238,226,.7); }
+  .cover { position: relative; justify-self: center; width: min(360px, 78vw); }
+  .cover img { border-radius: 10px; box-shadow: 0 40px 70px -25px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.08); transform: rotate(3deg); }
+  .cover::before { content: ""; position: absolute; inset: 6% -8% -6% 8%; background: var(--verde-2); border-radius: 10px; transform: rotate(-4deg); }
+  .cover img { position: relative; }
+  .datos { background: var(--verde-2); }
+  .datos .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .datos div { padding: 22px 10px; text-align: center; border-left: 1px solid rgba(253,238,226,.12); }
+  .datos div:first-child { border-left: 0; }
+  .datos b { display: block; font-family: Lora, serif; font-size: 1.7rem; font-weight: 500; }
+  .datos span { font-size: .82rem; opacity: .8; }
+
+  /* Problema */
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .foto { border-radius: var(--radio); overflow: hidden; }
+  .foto img { width: 100%; height: 100%; object-fit: cover; }
+  .checks { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; }
+  .checks li { display: flex; gap: 12px; align-items: flex-start; }
+  .checks li::before { content: ""; flex: 0 0 22px; height: 22px; margin-top: 3px; border-radius: 50%; background: var(--hoja) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat; }
+  .checks.x li::before { background-color: var(--terracota); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M7 7l10 10M17 7L7 17'/%3E%3C/svg%3E"); }
+
+  /* Capítulos */
+  .oscuro { background: var(--verde); color: var(--crema); }
+  .oscuro .eyebrow { color: #8fd0a6; }
+  .oscuro .lead { color: rgba(253,238,226,.78); }
+  .caps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+  .cap { background: var(--verde-2); border: 1px solid rgba(253,238,226,.1); border-radius: var(--radio); padding: 28px; }
+  .cap .n { font-family: Lora, serif; font-size: 2.2rem; color: #8fd0a6; line-height: 1; }
+  .cap h3 { margin: 14px 0 10px; }
+  .cap p { font-size: .93rem; color: rgba(253,238,226,.78); }
+
+  /* Plantas */
+  .plantas { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; margin-top: 44px; }
+  .planta { background: var(--blanco); border-radius: 14px; overflow: hidden; }
+  .planta img { aspect-ratio: 1; width: 100%; object-fit: cover; }
+  .planta div { padding: 12px 14px 14px; }
+  .planta b { display: block; font-family: Lora, serif; font-weight: 600; font-size: 1rem; line-height: 1.2; }
+  .planta i { font-size: .74rem; color: var(--suave); }
+  .tag { display: inline-block; margin-top: 6px; font-size: .68rem; font-weight: 500; padding: 2px 9px; border-radius: 999px; background: #dff0e4; color: #1d5d38; }
+
+  /* Método */
+  .metodo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
+  .paso { background: var(--blanco); border-radius: var(--radio); padding: 30px; border-top: 4px solid var(--hoja); }
+  .paso h3 { margin-bottom: 10px; }
+  .paso p { font-size: .95rem; color: var(--suave); }
+
+  /* Vistazo */
+  .vistazo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 44px; }
+  .vistazo img { border-radius: 8px; box-shadow: 0 18px 36px -18px rgba(11,42,28,.5); }
+
+  /* Autor */
+  .autor-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .autor-fotos img { border-radius: var(--radio); width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/4; }
+  .autor-fotos img:last-child { margin-top: 36px; }
+  .autor p + p { margin-top: 14px; }
+  .handle { display: inline-block; margin-top: 20px; font-weight: 500; color: var(--hoja); }
+
+  /* Oferta */
+  .oferta { background: var(--verde) url(img/sala-colgantes.jpg) center/cover; position: relative; color: var(--crema); }
+  .oferta::before { content: ""; position: absolute; inset: 0; background: rgba(11,42,28,.86); }
+  .oferta .wrap { position: relative; }
+  .caja { background: var(--crema); color: var(--tinta); border-radius: 24px; padding: 44px; display: grid; grid-template-columns: 240px 1fr; gap: 44px; align-items: center; max-width: 900px; margin: 0 auto; }
+  .caja img { border-radius: 8px; box-shadow: 0 24px 40px -20px rgba(0,0,0,.6); }
+  .caja h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .caja .checks { margin: 20px 0 28px; gap: 8px; font-size: .96rem; }
+
+  /* FAQ */
+  .faq { max-width: 780px; margin: 40px auto 0; }
+  details { border-bottom: 1px solid rgba(18,38,27,.15); }
+  summary { cursor: pointer; list-style: none; padding: 20px 36px 20px 0; font-weight: 500; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 4px; top: 14px; font-size: 1.6rem; font-weight: 300; color: var(--hoja); transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { padding: 0 0 22px; color: var(--suave); }
+
+  .soporte { background: var(--crema-2); padding: 56px 0; }
+  .soporte .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .btn.wa { background: #1fa855; box-shadow: 0 10px 24px -10px rgba(31,168,85,.8); }
+  .btn.wa:hover { background: #178a45; }
+
+  footer { background: var(--verde); color: rgba(253,238,226,.7); padding: 36px 0 96px; font-size: .82rem; text-align: center; }
+  footer .logo { justify-content: center; color: var(--crema); margin-bottom: 12px; }
+
+  .flotante { position: fixed; right: 18px; bottom: 18px; z-index: 30; width: 58px; height: 58px; border-radius: 50%; background: #1fa855; display: grid; place-items: center; box-shadow: 0 10px 24px -6px rgba(0,0,0,.45); transition: transform .15s; }
+  .flotante:hover { transform: scale(1.07); }
+  .flotante svg { width: 30px; height: 30px; }
+
+  @media (max-width: 860px) {
+    section { padding: 64px 0; }
+    .hero-grid, .dos, .caja { grid-template-columns: 1fr; }
+    .hero-grid { text-align: center; gap: 44px; }
+    .hero .sub { margin-left: auto; margin-right: auto; }
+    .caps, .metodo { grid-template-columns: 1fr; }
+    .datos .wrap { grid-template-columns: 1fr 1fr; }
+    .datos div:nth-child(3) { border-left: 0; }
+    .datos div:nth-child(n+3) { border-top: 1px solid rgba(253,238,226,.12); }
+    .vistazo { grid-template-columns: 1fr 1fr; }
+    .caja { padding: 28px; gap: 28px; text-align: left; }
+    .caja > img { max-width: 200px; margin: 0 auto; }
+    .dos .foto { order: -1; max-height: 380px; }
+    header .btn { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Jardín de Neko">
+      <img src="img/logo-claro.png" alt="Jardín de Neko" width="722" height="118">
+    </a>
+    <a class="btn sm" href="https://pay.hotmart.com/H96301462M?checkoutMode=10&amp;bid=1791751239746">Quiero mi eBook</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill">Guía completa · eBook en PDF</span>
+      <h1>Plantas de Interior para Principiantes</h1>
+      <p class="sub">Transforma tu hogar en un oasis verde en solo 30 días, incluso si nunca has cuidado una planta.</p>
+      <a class="btn" href="https://pay.hotmart.com/H96301462M?checkoutMode=10&amp;bid=1791751239746">Quiero mi eBook ahora
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="nota">Acceso inmediato · Compra protegida por Hotmart</p>
+    </div>
+    <div class="cover">
+      <img src="img/portada.jpg" alt="Portada del eBook Plantas de Interior para Principiantes, de Jardín de Neko" width="800" height="1131">
+    </div>
+  </div>
+  <div class="datos">
+    <div class="wrap">
+      <div><b>47</b><span>páginas ilustradas</span></div>
+      <div><b>13</b><span>plantas fáciles de cuidar</span></div>
+      <div><b>6</b><span>capítulos paso a paso</span></div>
+      <div><b>PDF</b><span>léelo en cualquier dispositivo</span></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap dos">
+    <div>
+      <p class="eyebrow">¿Te suena familiar?</p>
+      <h2>Compras una planta con ilusión… y a las semanas se está muriendo</h2>
+      <p class="lead">No es que tengas “mala mano”. Casi siempre es falta de información: la planta equivocada, en el lugar equivocado, con el riego equivocado.</p>
+      <ul class="checks x">
+        <li>Hojas amarillas, caídas o con las puntas secas y no sabes por qué.</li>
+        <li>No sabes cuánto ni cuándo regar, y terminas ahogándola u olvidándola.</li>
+        <li>Dudas si tu casa tiene suficiente luz para tener plantas.</li>
+        <li>Te preocupa que la planta sea tóxica para tu gato o tu perro.</li>
+      </ul>
+      <p class="lead">En esta guía cuidar plantas deja de ser un estrés y se convierte en un espacio de <strong>conexión, relajación y disfrute</strong>.</p>
+    </div>
+    <div class="foto"><img src="img/sala-monstera.jpg" alt="Rincón de una casa lleno de plantas de interior" loading="lazy" width="1000" height="1357"></div>
+  </div>
+</section>
+
+<section class="oscuro">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Lo que vas a aprender</p>
+      <h2>Todo lo esencial, sin tecnicismos</h2>
+      <p class="lead">Seis capítulos con instrucciones fáciles de seguir y tips específicos para dominar luz, riego y mantenimiento desde cero.</p>
+    </div>
+    <div class="caps">
+      <div class="cap"><div class="n">01</div><h3>El camino del jardinero</h3><p>El método de Mateo: paciencia y preparación, análisis y observación, crecimiento y conexión.</p></div>
+      <div class="cap"><div class="n">02</div><h3>Beneficios de tener plantas</h3><p>Aire más limpio, mejor ánimo, menos estrés y más productividad: 8 razones para llenar tu casa de verde.</p></div>
+      <div class="cap"><div class="n">03</div><h3>Las 13 mejores plantas</h3><p>Ficha de cada una: descripción, tips de cuidado y si es segura o tóxica para tus mascotas.</p></div>
+      <div class="cap"><div class="n">04</div><h3>Cómo elegir la adecuada</h3><p>Según la luz disponible, el tamaño del espacio, tu estilo de vida, el clima, tu propósito y tus mascotas.</p></div>
+      <div class="cap"><div class="n">05</div><h3>Cuidado básico</h3><p>Cuándo y cómo regar, síntomas de exceso o falta de agua y de luz, la receta de sustrato y cada cuánto abonar.</p></div>
+      <div class="cap"><div class="n">06</div><h3>Mantenimiento esencial</h3><p>Poda, limpieza de hojas, inspección regular y control natural de plagas con neem, jabón potásico y tierra de diatomeas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Capítulo 3</p>
+      <h2>13 plantas casi imposibles de matar</h2>
+      <p class="lead">Las más resistentes y agradecidas para empezar. De cada una sabrás qué luz necesita, cómo regarla y si puede convivir con tus mascotas.</p>
+    </div>
+    <div class="plantas">
+      <div class="planta"><img src="img/planta-01.jpg" alt="Pothos" loading="lazy" width="480" height="525"><div><b>Pothos</b><i>Epipremnum aureum</i></div></div>
+      <div class="planta"><img src="img/planta-02.jpg" alt="Lengua de suegra" loading="lazy" width="480" height="525"><div><b>Lengua de suegra</b><i>Sansevieria</i></div></div>
+      <div class="planta"><img src="img/planta-03.jpg" alt="Planta ZZ" loading="lazy" width="480" height="525"><div><b>Planta ZZ</b><i>Zamioculcas zamiifolia</i></div></div>
+      <div class="planta"><img src="img/planta-04.jpg" alt="Cactus y suculentas" loading="lazy" width="480" height="525"><div><b>Cactus y suculentas</b><i>Para luz directa</i></div></div>
+      <div class="planta"><img src="img/planta-05.jpg" alt="Balazo, Monstera deliciosa" loading="lazy" width="480" height="525"><div><b>Balazo</b><i>Monstera deliciosa</i></div></div>
+      <div class="planta"><img src="img/planta-06.jpg" alt="Filodendro" loading="lazy" width="480" height="525"><div><b>Filodendro</b><i>Philodendron</i></div></div>
+      <div class="planta"><img src="img/planta-07.jpg" alt="Lirio de paz" loading="lazy" width="480" height="525"><div><b>Lirio de paz</b><i>Spathiphyllum</i></div></div>
+      <div class="planta"><img src="img/planta-08.jpg" alt="Caña muda" loading="lazy" width="480" height="525"><div><b>Caña muda</b><i>Dieffenbachia</i></div></div>
+      <div class="planta"><img src="img/planta-09.jpg" alt="Palma areca" loading="lazy" width="480" height="525"><div><b>Palma areca</b><i>Dypsis lutescens</i><br><span class="tag">Pet-friendly</span></div></div>
+      <div class="planta"><img src="img/planta-10.jpg" alt="Peperomia" loading="lazy" width="480" height="525"><div><b>Peperomia</b><i>Compacta y fácil</i><br><span class="tag">Pet-friendly</span></div></div>
+      <div class="planta"><img src="img/planta-11.jpg" alt="Planta del caucho" loading="lazy" width="480" height="525"><div><b>Planta del caucho</b><i>Ficus elastica</i></div></div>
+      <div class="planta"><img src="img/planta-12.jpg" alt="Cinta" loading="lazy" width="480" height="525"><div><b>Cinta</b><i>Chlorophytum comosum</i><br><span class="tag">Pet-friendly</span></div></div>
+      <div class="planta"><img src="img/planta-13.jpg" alt="Aglaonema" loading="lazy" width="480" height="525"><div><b>Aglaonema</b><i>Tolera luz baja</i></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--crema-2)">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">El método</p>
+      <h2>El camino del jardinero</h2>
+      <p class="lead">Las claves que Mateo estructuró tras años de estudio y práctica para que te conviertas en un excelente jardinero y transformes tu entorno.</p>
+    </div>
+    <div class="metodo">
+      <div class="paso"><h3>Paciencia y preparación</h3><p>No forzar el proceso natural de las plantas, mantener una rutina de cuidado y preparar bien el suelo desde el principio.</p></div>
+      <div class="paso"><h3>Análisis y observación</h3><p>Aprender a interpretar los síntomas de cada planta, saber de dónde proviene y actuar sobre un problema a tiempo.</p></div>
+      <div class="paso"><h3>Crecimiento y conexión</h3><p>Mientras cuidas tus plantas, ellas te cuidan a ti. La jardinería es más que cuidar plantas: es un vínculo con la naturaleza.</p></div>
+    </div>
+    <div class="vistazo">
+      <img src="img/pag-metodo.jpg" alt="Página del eBook: el método" loading="lazy" width="640" height="905">
+      <img src="img/pag-plantas.jpg" alt="Página del eBook: fichas de plantas" loading="lazy" width="640" height="905">
+      <img src="img/pag-riego.jpg" alt="Página del eBook: cuándo regar" loading="lazy" width="640" height="905">
+      <img src="img/pag-sustrato.jpg" alt="Página del eBook: receta de sustrato" loading="lazy" width="640" height="905">
+    </div>
+    <p class="nota center" style="margin-top:22px">Un vistazo a las páginas del eBook</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap dos">
+    <div class="foto"><img src="img/gato.jpg" alt="Gato descansando entre plantas de interior" loading="lazy" width="1000" height="755"></div>
+    <div>
+      <p class="eyebrow">Esta guía es para ti si…</p>
+      <h2>Quieres una casa verde sin complicarte la vida</h2>
+      <ul class="checks">
+        <li>Nunca has cuidado una planta y no sabes por dónde empezar.</li>
+        <li>Ya lo intentaste y se te murieron, y quieres entender qué pasó.</li>
+        <li>Vives en un apartamento con poca luz o poco espacio.</li>
+        <li>Tienes mascotas y necesitas saber qué plantas son seguras.</li>
+        <li>Tienes poco tiempo, viajas o se te olvida regar.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--blanco)">
+  <div class="wrap dos autor">
+    <div>
+      <p class="eyebrow">Quién te acompaña</p>
+      <h2>¡Hola, soy Mateo!</h2>
+      <p class="lead">Soy un amante de la naturaleza, las plantas y la jardinería, y el creador de Jardín de Neko.</p>
+      <p class="lead">Busco que el cuidado de las plantas ya no sea un estrés, sino un espacio de conexión, relajación y disfrute. Ayudo a crear espacios verdes de gran impacto eligiendo las mejores plantas según el espacio, los gustos y el estilo de vida de cada persona.</p>
+      <p class="lead">Las ciudades son cada vez más caóticas, llenas de cemento, ruido y contaminación. Por eso quiero ayudarte a no perder ese contacto con la naturaleza que es tan importante para la salud física y mental.</p>
+      <span class="handle">@jardindeneko</span>
+    </div>
+    <div class="autor-fotos">
+      <img src="img/mateo-1.jpg" alt="Mateo, creador de Jardín de Neko, en un jardín tropical" loading="lazy" width="640" height="678">
+      <img src="img/mateo-2.jpg" alt="Mateo sosteniendo una planta en un vivero" loading="lazy" width="640" height="848">
+    </div>
+  </div>
+</section>
+
+<section class="oferta" id="comprar">
+  <div class="wrap">
+    <div class="caja">
+      <img src="img/portada.jpg" alt="Portada del eBook" loading="lazy" width="800" height="1131">
+      <div>
+        <p class="eyebrow">Empieza hoy</p>
+        <h2>Llévate la guía completa y dale vida a tu hogar</h2>
+        <ul class="checks">
+          <li>eBook de 47 páginas en PDF, con fotos y fichas.</li>
+          <li>13 plantas ideales para principiantes.</li>
+          <li>Guía de luz, riego, sustrato, abono y control de plagas.</li>
+          <li>Acceso a la comunidad exclusiva en Facebook.</li>
+          <li>Soporte directo por WhatsApp.</li>
+        </ul>
+        <a class="btn" href="https://pay.hotmart.com/H96301462M?checkoutMode=10&amp;bid=1791751239746">Comprar el eBook
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="nota">Pago seguro a través de Hotmart. Verás el precio en tu moneda local antes de pagar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Resolvemos tus dudas</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>¿Cómo recibo el eBook?</summary><p>Al completar tu compra, Hotmart te envía un correo con el acceso. Puedes descargarlo de inmediato y leerlo en tu celular, tablet o computador.</p></details>
+      <details><summary>¿Sirve si nunca he tenido plantas?</summary><p>Sí. Está pensado para quienes empiezan desde cero: explica los conceptos básicos de luz, riego y sustrato con un lenguaje sencillo y recomienda las plantas más resistentes.</p></details>
+      <details><summary>Tengo mascotas, ¿me sirve?</summary><p>Sí. Cada ficha indica si la planta es segura o tóxica para mascotas, y hay una sección dedicada a elegir plantas seguras para ellas.</p></details>
+      <details><summary>¿Qué formato tiene?</summary><p>Es un PDF de 47 páginas, ilustrado con fotografías. No necesitas ninguna aplicación especial para abrirlo.</p></details>
+      <details><summary>¿Qué medios de pago hay?</summary><p>El pago se hace en la pasarela segura de Hotmart, que muestra el precio en tu moneda y los medios disponibles en tu país (tarjeta de crédito o débito y opciones locales).</p></details>
+      <details><summary>¿Y si tengo un problema con mi compra?</summary><p>Escríbenos por WhatsApp y te ayudamos con el acceso o cualquier duda sobre el eBook.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="soporte">
+  <div class="wrap">
+    <div>
+      <h2 style="font-size:1.7rem">¿Tienes alguna duda antes de comprar?</h2>
+      <p class="lead" style="margin-top:8px">Escríbenos por WhatsApp y te respondemos personalmente.</p>
+    </div>
+    <a class="btn wa" href="https://wa.link/w013q0" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+      Soporte por WhatsApp
+    </a>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><img src="img/logo-claro.png" alt="Jardín de Neko" width="722" height="118"></div>
+    <p>@jardindeneko · Plantas de Interior para Principiantes</p>
+    <p>Este producto se comercializa a través de Hotmart.</p>
+  </div>
+</footer>
+
+<a class="flotante" href="https://wa.link/w013q0" target="_blank" rel="noopener" aria-label="Soporte por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.2c0 3 2.6 5.6 5.6 5.6l1.1-1.3-1.7-1-0.8.6c-.9-.4-1.7-1.200-2.100-2.100l.6-.8-1-1.700z" fill="#fff" stroke="none"/></svg>
+</a>
+
+</body>
+</html>
